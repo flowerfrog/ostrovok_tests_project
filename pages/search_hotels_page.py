@@ -1,13 +1,13 @@
-from selene import browser, have, be, query
+from selene import browser, have, be
 from selene.support.shared.jquery_style import ss
 
 
 class SearchHotelPage:
     def open_search_page(self):
-        browser.open("hotel/russia/rostov-on-don/")
+        browser.open("https://ostrovok.ru/hotel/russia/rostov-on-don/")
         return self
 
-    def changing_filters_and_researching_hotel(self, hotel):
+    def changing_filters_and_researching_hotel(self):
         browser.element('button[data-testid="search-button"]').should(be.visible).click()
         browser.element('#apart').should(be.visible).execute_script('element.click()')
         browser.element('#has_internet').execute_script('element.scrollIntoView()')
