@@ -4,7 +4,7 @@ from selene.support.shared.jquery_style import ss
 
 class SearchHotelPage:
     def open_search_page(self):
-        browser.open("https://ostrovok.ru/hotel/russia/rostov-on-don/")
+        browser.open("hotel/russia/rostov-on-don/")
         return self
 
     def changing_filters_and_researching_hotel(self):
