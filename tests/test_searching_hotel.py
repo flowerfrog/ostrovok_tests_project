@@ -1,6 +1,6 @@
 import allure
 
-from data.hotels import Hotel
+from data.hotels import SearchingHotel
 from data.users import User
 from pages.main_page import MainPage
 from pages.search_hotels_page import SearchHotelPage
@@ -41,7 +41,7 @@ def test_changing_filters_and_researching_hotel():
     search_hotels_page = SearchHotelPage()
 
     # GIVEN
-    hotel = Hotel(
+    hotel = SearchingHotel(
         name='',
         address='Rostov-on-Don',
         type="Apartments",
