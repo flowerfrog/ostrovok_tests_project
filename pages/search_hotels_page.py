@@ -9,7 +9,6 @@ class SearchHotelPage:
 
     def changing_filters_and_researching_hotel(self, hotel):
         browser.element('button[data-testid="search-button"]').should(be.visible).click()
-        browser.element('input[name="price_to"]').should(be.visible).type(hotel.price_for_night)
         browser.element('#apart').should(be.visible).execute_script('element.click()')
         browser.element('#has_internet').execute_script('element.scrollIntoView()')
         browser.element('#has_internet').should(be.visible).execute_script('element.click()')
