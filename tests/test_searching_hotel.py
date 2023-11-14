@@ -54,7 +54,7 @@ def test_changing_filters_and_researching_hotel():
 
     # WHEN
     with allure.step("Select values in filters and apply filters"):
-        search_hotels_page.changing_filters_and_researching_hotel(hotel)
+        search_hotels_page.changing_filters_and_researching_hotel()
 
     # THEN
     with allure.step("Checking that the hotel search result matches the user’s filters"):
