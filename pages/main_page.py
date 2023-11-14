@@ -1,4 +1,4 @@
-from selene import browser, be, have
+from selene import browser, be, have, query
 
 
 class MainPage:
@@ -21,4 +21,13 @@ class MainPage:
     def hotel_must_found(self, user):
         browser.all(".zenregioninfo").should(have.texts(
             f'{user.destination_city}, {user.destination_country}\n{user.arrival_date} — {user.departure_date}\n{user.count_room} room for {user.count_guests} guests'))
+        return self
+
+    def click_to_tab_for_business_trips(self):
+        browser.element('a[class="Tabs-module__control--2OPWT"]').should(be.visible).click()
+        return self
+
+    def button_was_clicked(self):
+        browser.switch_to_next_tab()
+        browser.should(have.url_containing('https://corp.ostrovok.ru/?ref=corplanding-button-home'))
         return self
