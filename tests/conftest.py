@@ -21,6 +21,8 @@ def setup_browser(request):
     browser_version = request.config.getoption('--browser_version')
     browser_version = browser_version if browser_version != "" else DEFAULT_BROWSER_VERSION
     options = Options()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     selenoid_capabilities = {
         "browserName": "chrome",
         "browserVersion": "100.0",
@@ -36,6 +38,9 @@ def setup_browser(request):
     driver = webdriver.Remote(command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub", options=options)
     browser.config.base_url = "https://ostrovok.ru/"
     browser.config.driver = driver
+    # browser.config.driver_options()
+    browser.config.driver_options = options
+
     browser.config.timeout = 3.0
     browser.config.window_width = 1920
     browser.config.window_height = 1080
