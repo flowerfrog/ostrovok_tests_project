@@ -41,12 +41,12 @@
 
 ### Для запуска автотестов в Jenkins
 
-##### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/OstrovokSiteAutoTest/">проект</a>
-##### 2. Выбрать пункт `Build with Parameters`
-##### 3. В случае необходимости изменить параметры, выбрав значение из выпадающего списков
-##### 4. Указать комментарий
-##### 5. Нажать кнопку `Build`
-##### 6. Результат запуска сборки можно посмотреть в отчёте Allure
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/OstrovokSiteAutoTest/">проект</a>
+2. Выбрать пункт `Build with Parameters`
+3. В случае необходимости изменить параметры, выбрав значение из выпадающего списков
+4. Указать комментарий
+5. Нажать кнопку `Build`
+6. Результат запуска сборки можно посмотреть в отчёте Allure
 
 ![This is an image](design/image/jenkins_build.png)
 
