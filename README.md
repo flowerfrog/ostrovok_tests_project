@@ -36,7 +36,7 @@
 
 #### Параметры сборки
 
-* environment (default stage). Параметр определяет окружение для запуска тестов
+* `environment` - параметр определяет окружение для запуска тестов
 
 
 ### Для запуска автотестов в Jenkins
@@ -44,10 +44,10 @@
 #### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/OstrovokSiteAutoTest/">проект</a>
 
 
-#### 2. Выбрать пункт **Build with Parameters**
+#### 2. Выбрать пункт `Build with Parameters`
 #### 3. В случае необходимости изменить параметры, выбрав значение из выпадающего списков
 #### 4. Указать комментарий
-#### 5. Нажать **Build**
+#### 5. Нажать кнопку `Build`
 #### 6. Результат запуска сборки можно посмотреть в отчёте Allure
 
 ![This is an image](design/image/jenkins_build.png)
@@ -57,15 +57,17 @@
 ![This is an image](design/image/example_test_allure.png)
 
 ### Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в Allure TestOps
-> <a target="_blank" href="https://allure.autotests.cloud/project/3786/dashboards">Сссылка на проект в AllureTestOps</a> (запрос доступа admin@qa.guru)
+> <a target="_blank" href="https://allure.autotests.cloud/project/3786/dashboards">Ссылка на проект в AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
 #### Тест-планы проекта
 ![This is an image](design/image/allure_TestOps_test_plans.png)
 
 #### Общий список всех кейсов, имеющихся в системе (без разделения по тест-планам и виду выполнения тестирования)
 ![This is an image](design/image/allure_TestOps_test_cases.png)
+
 #### Пример отчёта выполнения одного из автотестов
 ![This is an image](design/image/example_autotests_allure_TestOps.png)
+
 #### Пример dashboard с общими результатами тестирования
 ![This is an image](design/image/allure_TestOps_dashboard.png)
 
