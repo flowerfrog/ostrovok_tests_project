@@ -50,7 +50,7 @@ def test_changing_filters_and_researching_hotel():
     )
 
     with allure.step("Open the search hotels page"):
-        search_hotels_page.open_search_page(hotel)
+        search_hotels_page.open_search_page()
 
     # WHEN
     with allure.step("Select values in filters and apply filters"):
