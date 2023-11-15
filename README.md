@@ -32,7 +32,7 @@
 <img src="design/icons/python-original.svg" width="50"> <img src="design/icons/pytest.png" width="50"> <img src="design/icons/intellij_pycharm.png" width="50"> <img src="design/icons/selene.png" width="50"> <img src="design/icons/selenium.png" width="50"> <img src="design/icons/selenoid.png" width="50"> <img src="design/icons/jenkins.png" width="50"> <img src="design/icons/allure_report.png" width="50"> <img src="design/icons/allure_testops.png" width="50"> <img src="design/icons/tg.png" width="50"> <img src="design/icons/jira.png" width="50">
 
 ### Запуск автотестов выполняется на сервере Jenkins
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/008-oddfrog-python-8-15/">Ссылка на проект в Jenkins</a>
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/OstrovokSiteAutoTest/">Ссылка на проект в Jenkins</a>
 
 #### Параметры сборки
 
@@ -41,7 +41,7 @@
 
 ### Для запуска автотестов в Jenkins
 
-#### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/008-oddfrog-python-8-15/">проект</a>
+#### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/OstrovokSiteAutoTest/">проект</a>
 
 ![This is an image](design/image/jenkins_project.png)
 
@@ -52,6 +52,28 @@
 #### 6. Результат запуска сборки можно посмотреть в отчёте Allure
 
 ![This is an image](design/image/jenkins_build.png)
+
+### Пример Allure отчета
+![This is an image](design/image/allure_report.png)
+
+### Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в Allure TestOps
+> <a target="_blank" href="https://allure.autotests.cloud/project/3786/dashboards">Сссылка на проект в AllureTestOps</a> (запрос доступа admin@qa.guru)
+
+#### Тест-планы проекта
+![This is an image](design/image/allure_TestOps_test_plans.png)
+
+#### Общий список всех кейсов, имеющихся в системе (без разделения по тест-планам и виду выполнения тестирования)
+![This is an image](design/image/allure_TestOps_test_cases.png)
+#### Пример dashboard с общими результатами тестирования
+![This is an image](design/image/allure_TestOps_dashboard.png)
+
+### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram
+![This is an image](design/image/tg_notification.png)
+
+
+
+
+
 
 
 
