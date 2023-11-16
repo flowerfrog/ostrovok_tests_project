@@ -19,5 +19,6 @@ class UserFeedback:
     hotel_city: str
     hotel_country: str
     questions: str
+    successful_feedback: str
 
 
