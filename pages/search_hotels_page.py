@@ -20,7 +20,7 @@ class SearchHotelPage:
 
     def hotel_must_found(self, hotel):
         ss('.zen-hotelcard-address.link').element_by(have.text(hotel.address)).should(be.visible)
-        browser.all(".zen-serpresultfilters").should(have.texts(f'{hotel.type}\n{hotel.services_in_the_room[0]}\n{hotel.services_in_the_room[1]}\n{hotel.services_in_the_hotel[0]}\n{hotel.services_in_the_hotel[1]}'))
+        browser.all(".zen-serpresultfilters").should(have.texts(f'{hotel.services_in_the_room[0]}\n{hotel.services_in_the_room[1]}\n{hotel.services_in_the_hotel[0]}\n{hotel.services_in_the_hotel[1]}\n{hotel.type}'))
 
 
 
