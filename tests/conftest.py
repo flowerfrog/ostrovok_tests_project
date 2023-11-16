@@ -38,10 +38,9 @@ def setup_browser(request):
     driver = webdriver.Remote(command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub", options=options)
     browser.config.base_url = "https://ostrovok.ru/"
     browser.config.driver = driver
-    # browser.config.driver_options()
     browser.config.driver_options = options
 
-    browser.config.timeout = 5.0
+    browser.config.timeout = 4.0
     browser.config.window_width = 1920
     browser.config.window_height = 1080
 
