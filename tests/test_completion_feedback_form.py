@@ -5,7 +5,7 @@ from pages.feedback_pade import FeedbackPage
 
 @allure.tag("web")
 @allure.label("owner", "flowerfrog")
-@allure.feature("Checking that the feedback form is completed and sent")
+@allure.feature("Sending feedback")
 def test_feedback_sending():
     feedback_page = FeedbackPage()
 
@@ -26,5 +26,5 @@ def test_feedback_sending():
     with allure.step("Filling the feedback form"):
         feedback_page.filling_feedback_form(feedback)
 
-    with allure.step("Checking that feedback has been sent"):
+    with allure.step("Checking that feedback form has been completed and feedback has been sent"):
         feedback_page.feedback_form_should_sending(feedback)
