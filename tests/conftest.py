@@ -1,5 +1,6 @@
 import os
 import pytest
+from dotenv import load_dotenv
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -11,7 +12,7 @@ DEFAULT_BROWSER_VERSION = "100.0"
 def pytest_addoption(parser):
     parser.addoption(
         '--browser_version',
-        default='100.0'
+        default='120.0'
     )
 
 
@@ -27,13 +28,13 @@ def setup_browser(request):
         "browserVersion": "120.0",
         "selenoid:options": {
             "enableVNC": True,
-            "enableVideo": True
+            "enableVideo": False
         }
     }
     options.capabilities.update(selenoid_capabilities)
-
+    load_dotenv()
     remote_drv = os.getenv('REMOTE_DRV')
-    driver = webdriver.Remote(command_executor=f"{remote_drv}", options=options)
+    driver = webdriver.Remote(command_executor=f'{remote_drv}', options=options)
     browser.config.base_url = "https://ostrovok.ru/"
     browser.config.driver = driver
     browser.config.driver_options = options
