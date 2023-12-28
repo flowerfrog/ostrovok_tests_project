@@ -28,7 +28,7 @@ def setup_browser(request):
         "browserVersion": "120.0",
         "selenoid:options": {
             "enableVNC": True,
-            "enableVideo": True
+            "enableVideo": False
         }
     }
     options.capabilities.update(selenoid_capabilities)
